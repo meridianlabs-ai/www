@@ -9,7 +9,13 @@
       body {
         margin: 0;
         padding: 0;
-        background-color: black;
+        background-color: #050505;
+        background-image: url('bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-blend-mode: normal;
+        opacity: 1;
         color: #5aa9e6;
         font-family: "Roboto", sans-serif;
         height: 100vh;
@@ -35,14 +41,18 @@
         font-size: 2.5rem;
         font-weight: 700;
         margin: 0.5em 0;
+        color: #7fc8f8;
+        text-shadow: 0 0 15px rgba(90, 169, 230, 0.7);
       }
 
       .description {
-        font-size: 1rem;
+        font-size: 1.1rem;
         max-width: 750px;
         margin-top: 1em;
         line-height: 1.6;
         font-family: "Roboto", sans-serif;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        padding: 0.5em;
       }
 
       .footer {
@@ -56,6 +66,7 @@
         box-sizing: border-box;
         text-align: center;
         color: #5aa9e6;
+        text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
       }
 
       .footer-section {
@@ -76,32 +87,34 @@
       }
 
       .footer a {
-        color: #5aa9e6;
+        color: #7fc8f8;
         text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+      }
+      
+      .footer a:hover {
+        color: #fff;
+        text-shadow: 0 0 8px rgba(90, 169, 230, 0.7);
       }
 
-      body::before {
+      body::after {
         content: "";
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: repeating-linear-gradient(
-          to bottom,
-          rgba(90, 169, 230, 0.2) 0px,
-          rgba(90, 169, 230, 0.1) 2px,
-          rgba(0, 0, 0, 0) 4px
-        );
+        background-color: rgba(0, 0, 0, 0.6);
         pointer-events: none;
-        opacity: 1;
-        z-index: 0;
+        z-index: 1;
       }
 
       .main-content,
       .footer {
         position: relative;
-        z-index: 1;
+        z-index: 2;
       }
 
       .copyright {
@@ -112,6 +125,11 @@
       .contact {
         padding-top: 0.5em;
         padding-bottom: 1em;
+      }
+      
+      .footer-content {
+        padding: 0.8em;
+        display: inline-block;
       }
     </style>
   </head>
@@ -129,13 +147,15 @@
       <div class="footer-section left"></div>
 
       <div class="footer-section center">
-        <div>
-          Meridian Research Labs is a 501(c)(3) nonprofit based in Boston, MA
+        <div class="footer-content">
+          <div>
+            Meridian Research Labs is a 501(c)(3) nonprofit based in Boston, MA
+          </div>
+          <div class="contact">
+            <a href="mailto:info@meridianlabs.ai">info@meridianlabs.ai</a>
+          </div>
+          <div class="copyright">© 2025 Meridian Research Labs</div>
         </div>
-        <div class="contact">
-          <a href="mailto:info@meridianlabs.ai">info@meridianlabs.ai</a>
-        </div>
-        <div class="copyright">© 2025 Meridian Research Labs</div>
       </div>
 
       <div class="footer-section right"></div>
