@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meridian Research Labs</title>
+    <title>Projects - Meridian Research Labs</title>
     <link rel="stylesheet" href="fonts/fonts.css" />
     <style>
       body {
@@ -34,6 +34,8 @@
         flex-grow: 1;
         text-align: center;
         padding: 0 2rem;
+        width: 100%;
+        max-width: 1200px;
       }
 
       h1 {
@@ -42,7 +44,16 @@
         font-weight: 700;
         margin: 0.5em 0;
         color: #7fc8f8;
-        text-shadow: 0 0 15px rgba(90, 169, 230, 0.7);
+        text-shadow: 0 0 15px rgba(90, 169, 230, 0.7), 0 0 20px rgba(0, 0, 0, 0.9);
+      }
+
+      h2 {
+        font-family: "Orbitron", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin: 0.5em 0;
+        color: #7fc8f8;
+        text-shadow: 0 0 10px rgba(90, 169, 230, 0.7), 0 0 20px rgba(0, 0, 0, 0.9);
       }
 
       .description {
@@ -51,8 +62,73 @@
         margin-top: 1em;
         line-height: 1.6;
         font-family: "Roboto", sans-serif;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.8);
         padding: 0.5em;
+      }
+
+      .project-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 900px;
+        margin: 2em auto 0;
+        gap: 2em;
+      }
+
+      .project {
+        background-color: rgba(5, 5, 5, 0.3);
+        border-radius: 8px;
+        padding: 2em;
+        text-align: left;
+        border: 1px solid rgba(90, 169, 230, 0.2);
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .project h3 {
+        margin-top: 0;
+        color: #7fc8f8;
+        font-family: "Orbitron", sans-serif;
+        font-weight: 600;
+        font-size: 1.6rem;
+        margin-bottom: 0.3em;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.8);
+      }
+
+      .project p {
+        margin: 0 0 1em 0;
+        line-height: 1.6;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.8);
+      }
+      
+      .project p:last-child {
+        margin-bottom: 0;
+      }
+
+      .project-links {
+        margin-top: 1.5em;
+        display: flex;
+        gap: 1em;
+        flex-wrap: wrap;
+      }
+
+      .project-link {
+        display: inline-block;
+        padding: 0.5em 1em;
+        background-color: rgba(90, 169, 230, 0.1);
+        border: 1px solid rgba(90, 169, 230, 0.3);
+        border-radius: 4px;
+        color: #7fc8f8;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+      }
+
+      .project-link:hover {
+        background-color: rgba(90, 169, 230, 0.2);
+        border-color: rgba(90, 169, 230, 0.5);
+        color: #fff;
+        text-shadow: 0 0 8px rgba(90, 169, 230, 0.7), 0 0 15px rgba(0, 0, 0, 0.8);
       }
 
       .footer {
@@ -201,11 +277,31 @@
       </div>
     </nav>
     <div class="main-content">
-      <h1>Meridian Research Labs</h1>
+      <h1>Our Projects</h1>
       <div class="description">
-        Meridian Labs empowers the public with evidence-based understanding of
-        AI technologies through research, education, and evaluation tools that
-        bridge technical capabilities with real-world implications.
+        Meridian Research Labs contributes to open-source tools that advance the public understanding of AI systems, working in partnership with leading organizations.
+      </div>
+      
+      <div class="project-list">
+        <div class="project">
+          <h3>Inspect AI</h3>
+          <p>Inspect AI is an open-source framework developed by the UK AI Safety Institute (AISI) with Meridian Research Labs as contributors. This framework enables systematic evaluation of large language models (LLMs), providing researchers, developers, and policy makers with the tools to conduct rigorous, repeatable assessments of AI capabilities and behaviors.</p>
+          <p>The platform enables standardized testing protocols to track model progress, identify potential risks, and ensure that AI systems are reliable and aligned with human values before deployment.</p>
+          <div class="project-links">
+            <a href="https://github.com/UKGovernmentBEIS/inspect_ai" class="project-link" target="_blank">GitHub Repository</a>
+            <a href="https://inspect.aisi.org.uk" class="project-link" target="_blank">Documentation</a>
+          </div>
+        </div>
+        
+        <div class="project">
+          <h3>Inspect AI VS Code Extension</h3>
+          <p>The Inspect AI Visual Studio Code extension, developed by the UK AI Safety Institute with contributions from Meridian Research Labs, brings the power of LLM evaluation directly into your development environment. This extension enables developers to quickly test AI behavior during the development process, without leaving their editor.</p>
+          <p>With the VS Code extension, you can detect potential issues in your AI systems early in the development cycle, ensuring more reliable and safe AI applications.</p>
+          <div class="project-links">
+            <a href="https://marketplace.visualstudio.com/items?itemName=ukaisi.inspect-ai" class="project-link" target="_blank">VS Code Marketplace</a>
+            <a href="https://inspect.aisi.org.uk/vscode.html" class="project-link" target="_blank">Documentation</a>
+          </div>
+        </div>
       </div>
     </div>
 
