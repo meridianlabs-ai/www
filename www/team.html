@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meridian Research Labs</title>
+    <title>Team - Meridian Research Labs</title>
     <link rel="stylesheet" href="fonts/fonts.css" />
     <style>
       body {
@@ -34,6 +34,8 @@
         flex-grow: 1;
         text-align: center;
         padding: 0 2rem;
+        width: 100%;
+        max-width: 1200px;
       }
 
       h1 {
@@ -42,7 +44,16 @@
         font-weight: 700;
         margin: 0.5em 0;
         color: #7fc8f8;
-        text-shadow: 0 0 15px rgba(90, 169, 230, 0.7);
+        text-shadow: 0 0 15px rgba(90, 169, 230, 0.7), 0 0 20px rgba(0, 0, 0, 0.9);
+      }
+
+      h2 {
+        font-family: "Orbitron", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin: 0.5em 0;
+        color: #7fc8f8;
+        text-shadow: 0 0 10px rgba(90, 169, 230, 0.7), 0 0 20px rgba(0, 0, 0, 0.9);
       }
 
       .description {
@@ -51,8 +62,56 @@
         margin-top: 1em;
         line-height: 1.6;
         font-family: "Roboto", sans-serif;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.8);
         padding: 0.5em;
+      }
+
+      .team-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 800px;
+        margin: 2em auto 0;
+        gap: 1.2em;
+      }
+
+      .team-member {
+        background-color: rgba(5, 5, 5, 0.3);
+        border-radius: 8px;
+        padding: 1.5em;
+        text-align: left;
+        border: 1px solid rgba(90, 169, 230, 0.2);
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .team-member h3 {
+        margin-top: 0;
+        color: #7fc8f8;
+        font-family: "Orbitron", sans-serif;
+        font-weight: 600;
+        font-size: 1.4rem;
+        margin-bottom: 0.3em;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.8);
+      }
+
+      .team-member p:nth-child(2) {
+        font-weight: 500;
+        font-size: 1.1rem;
+        color: #7fc8f8;
+        margin: 0 0 0.8em 0;
+        border-bottom: 1px solid rgba(90, 169, 230, 0.3);
+        padding-bottom: 0.4em;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.8);
+      }
+
+      .team-member p {
+        margin: 0 0 0.7em 0;
+        line-height: 1.4;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.8);
+      }
+      
+      .team-member p:last-child {
+        margin-bottom: 0;
       }
 
       .footer {
@@ -201,9 +260,25 @@
       </div>
     </nav>
     <div class="main-content">
-      <h1>Meridian Labs</h1>
+      <h1>Our Team</h1>
       <div class="description">
-      Meridian Labs is a nonprofit organization dedicated to frontier AI research and testing tools. 
+        Meet the dedicated researchers and experts behind Meridian Research Labs.
+      </div>
+      
+      <div class="team-list">
+        <div class="team-member">
+          <h3>Charles Teague</h3>
+          <p>Co-Founder & CEO</p>
+          <p>Charles co-founded Meridian Research Labs in 2025 to advance the public understanding of AI systems. Previously, as Software Architect at Posit PBC, he was a core contributor and maintainer of Quarto, a leading open-source scientific publishing system used globally by researchers and data scientists.</p>
+          <p>He founded and led Lose It! as CEO for over a decade, growing the weight loss app to 30 million users before its acquisition by EverydayHealth. Earlier, Charles co-founded Onfolio (acquired by Microsoft) and was Principal Development Lead at Microsoft. He also held key engineering leadership roles at Macromedia as Director of Engineering for ColdFusion MX and at Allaire as Engineering Manager.</p>
+        </div>
+        
+        <div class="team-member">
+          <h3>Eric Patey</h3>
+          <p>Co-Founder & Principal Researcher</p>
+          <p>Eric co-founded Meridian Research Labs in 2025, bringing extensive expertise in software architecture and engineering leadership. Most recently, he served as Distinguished Engineer at Sonos after leading their entry into B2B as Senior Director for Sonos for Business.</p>
+          <p>Previously, Eric co-founded Talko Inc. as VP of Development, was Partner Software Engineering Manager at Microsoft across Xbox and Office platforms, and was a co-founder/VP of Development at Groove Networks (acquired by Microsoft). He was also a founding engineer at SilverStream Software and led development at Iris Associates (Lotus Notes).</p>
+        </div>
       </div>
     </div>
 
